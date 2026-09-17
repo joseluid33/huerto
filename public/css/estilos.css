@@ -1,0 +1,406 @@
+/* =========================================================
+   Mi Huerto - Estilos personalizados
+   Paleta inspirada en diseño: verde bosque / crema / tierra
+   ========================================================= */
+
+:root {
+    --verde-oscuro: #031e17;
+    --verde-medio: #1d4a3a;
+    --verde-suave: #2e6b50;
+    --verde-hoja: #4c9f70;
+    --verde-claro: #eaf7ee;
+    --crema: #f7f6f4;
+    --cafe: #896a4e;
+    --taupe: #a1948b;
+    --ambar: #d99a2b;
+    --ambar-claro: #fdf3e3;
+    --rojo-suave: #c0392b;
+    --rojo-claro: #fdecec;
+    --borde: #e7e2da;
+    --fuente: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: var(--crema);
+    color: #22302a;
+    font-family: var(--fuente);
+    min-height: 100vh;
+}
+
+/* ------------------- NAVBAR ------------------- */
+.nav-huerto {
+    background: var(--verde-oscuro);
+    box-shadow: 0 2px 12px rgba(3, 30, 23, 0.25);
+    padding: 0.9rem 0;
+}
+
+.nav-huerto .navbar-brand {
+    color: var(--crema);
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-huerto .navbar-brand:hover {
+    color: #fff;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--verde-hoja), var(--verde-medio));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.nav-huerto .nav-link {
+    color: rgba(247, 246, 244, 0.75);
+    font-weight: 500;
+    margin-left: 0.5rem;
+    transition: color 0.2s;
+}
+
+.nav-huerto .nav-link:hover {
+    color: #fff;
+}
+
+.nav-huerto .nav-link.active {
+    color: #fff;
+}
+
+.btn-crear {
+    background: var(--verde-hoja) !important;
+    color: #fff !important;
+    border-radius: 10px;
+    padding: 0.45rem 1rem !important;
+    margin-left: 0.75rem;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn-crear:hover {
+    background: #3e8f63 !important;
+    transform: translateY(-1px);
+}
+
+/* ------------------- ENCABEZADO ------------------- */
+.titulo-panel {
+    color: var(--verde-oscuro);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.subtitulo-panel {
+    color: var(--taupe);
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+/* ------------------- TARJETAS DE RESUMEN ------------------- */
+.card-resumen {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(3, 30, 23, 0.06);
+    overflow: hidden;
+}
+
+.card-resumen .card-body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+}
+
+.resumen-icono {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.resumen-numero {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--verde-oscuro);
+}
+
+.resumen-etiqueta {
+    font-size: 0.8rem;
+    color: var(--taupe);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.icono-total { background: var(--verde-claro); }
+.icono-riego { background: var(--ambar-claro); }
+.icono-cosecha { background: var(--verde-claro); }
+.icono-termi { background: #f1ece6; }
+
+/* ------------------- TABLA DE CULTIVOS ------------------- */
+.panel-tabla {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(3, 30, 23, 0.06);
+    overflow: hidden;
+}
+
+.table-huerto {
+    margin-bottom: 0;
+}
+
+.table-huerto thead th {
+    background: var(--verde-medio);
+    color: var(--crema);
+    font-weight: 500;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    padding: 0.85rem 1rem;
+}
+
+.table-huerto tbody td {
+    vertical-align: middle;
+    border-color: var(--borde);
+    padding: 0.9rem 1rem;
+    color: #33403a;
+}
+
+.table-huerto tbody tr {
+    transition: background 0.15s;
+}
+
+.table-huerto tbody tr:hover {
+    background: #fbfaf7;
+}
+
+.nombre-planta {
+    font-weight: 600;
+    color: var(--verde-oscuro);
+    font-size: 1rem;
+}
+
+.variedad-planta {
+    color: var(--taupe);
+    font-size: 0.82rem;
+}
+
+.fecha-cell small {
+    color: var(--taupe);
+    font-size: 0.72rem;
+    display: block;
+}
+
+.fecha-cell {
+    color: #4d5a53;
+    font-size: 0.88rem;
+}
+
+.fecha-proxima {
+    font-weight: 600;
+    color: var(--verde-suave);
+}
+
+/* filas con alerta */
+.fila-riego {
+    border-left: 4px solid var(--ambar);
+}
+
+.fila-cosecha {
+    border-left: 4px solid var(--verde-hoja);
+}
+
+/* ------------------- BADGES ------------------- */
+.badge-estado {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.4em 0.75em;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+}
+
+.badge-crecimiento { background: var(--ambar-claro); color: #8a6414; border: 1px solid #eed9a8; }
+.badge-listo { background: var(--verde-claro); color: var(--verde-suave); border: 1px solid #c4e4cf; }
+.badge-cosechado { background: #f1ece6; color: var(--cafe); border: 1px solid #e2d6c9; }
+
+.badge-alerta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.35em 0.7em;
+    white-space: nowrap;
+}
+
+.badge-alerta-riego { background: var(--ambar-claro); color: #9a6a10; border: 1px solid #eed9a8; }
+.badge-alerta-cosecha { background: var(--verde-claro); color: var(--verde-suave); border: 1px solid #c4e4cf; }
+
+/* ------------------- BOTONES DE ACCIÓN ------------------- */
+.btn-accion {
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+}
+
+.btn-mini-riego {
+    background: var(--ambar-claro);
+    color: #9a6a10;
+    border: 1px solid #eed9a8;
+}
+
+.btn-mini-riego:hover {
+    background: #f3e3c4;
+    color: #8a5c0d;
+}
+
+.btn-mini-estado {
+    background: #fff;
+    color: var(--verde-suave);
+    border: 1px solid var(--verde-hoja);
+}
+
+.btn-mini-estado:hover {
+    background: var(--verde-claro);
+    color: var(--verde-medio);
+}
+
+.btn-mini-eliminar {
+    background: var(--rojo-claro);
+    color: var(--rojo-suave);
+    border: 1px solid #f3c9c4;
+}
+
+.btn-mini-eliminar:hover {
+    background: #f6d9d6;
+    color: #a83023;
+}
+
+.select-estado {
+    font-size: 0.78rem;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+    padding: 0.35rem 0.5rem;
+    color: #4d5a53;
+    min-width: 150px;
+}
+
+/* ------------------- FLASH ------------------- */
+.alert-soft {
+    border: none;
+    border-radius: 14px;
+    font-weight: 500;
+}
+
+/* ------------------- FORMULARIO ------------------- */
+.tarjeta-form {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(3, 30, 23, 0.06);
+    overflow: hidden;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.tarjeta-form .cabecera {
+    background: var(--verde-oscuro);
+    color: var(--crema);
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tarjeta-form .cabecera h1 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.tarjeta-form .cuerpo {
+    padding: 1.75rem;
+}
+
+.tarjeta-form .form-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--verde-oscuro);
+}
+
+.tarjeta-form .form-control,
+.tarjeta-form .form-select {
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+    padding: 0.7rem 0.9rem;
+    color: #33403a;
+    font-size: 0.92rem;
+    background-color: #fcfbf9;
+}
+
+.tarjeta-form .form-control:focus,
+.tarjeta-form .form-select:focus {
+    border-color: var(--verde-hoja);
+    box-shadow: 0 0 0 0.2rem rgba(76, 159, 112, 0.15);
+    background-color: #fff;
+}
+
+.btn-guardar {
+    background: var(--verde-hoja);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.7rem 1.5rem;
+    border: none;
+}
+
+.btn-guardar:hover {
+    background: #3e8f63;
+    color: #fff;
+}
+
+.btn-cancelar {
+    background: #f1ece6;
+    color: var(--cafe);
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 0.7rem 1.5rem;
+    border: none;
+}
+
+/* ------------------- VACÍO ------------------- */
+.estado-vacio {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    color: var(--taupe);
+}
+
+.estado-vacio .icono {
+    font-size: 2.8rem;
+    opacity: 0.5;
+}
+
+/* ------------------- RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+    .ocultar-movil {
+        display: none;
+    }
+}
